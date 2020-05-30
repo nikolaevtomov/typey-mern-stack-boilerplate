@@ -7,10 +7,9 @@
     "build:clean": "rm -rf dist && mkdir dist",
     "build:js": "cross-env NODE_ENV=production DEBUG=false webpack --mode production --progress --colors",
     "lint": "tsc --noEmit && eslint 'src/*.{ts,tsx,js,jsx,css,less,json}' --quiet --fix",
-    "prettier": "prettier --write '*/*.{ts,tsx,js,jsx,css,less,json}'",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
     "start:dev": "cross-env NODE_ENV=development DEBUG=true webpack --watch --mode development",
-    "test": "mocha -require ts-node/register 'src/**/*.spec.{ts,tsx,js,jsx}'",
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "test": "mocha -require ts-node/register 'src/**/*.spec.{ts,tsx,js,jsx}'"
   },
   "dependencies": {
     "@babel/core": "^7.9.6",

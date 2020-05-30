@@ -1,5 +1,8 @@
 /node_modules/*
-/dist/*
+client/node_modules/*
+server/node_modules/*
+
 .vscode/
 
 client/dist/
+server/dist/

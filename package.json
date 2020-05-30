@@ -38,7 +38,8 @@
     "test:server": "cd server && npm run test",
     "watch:client": "cd client && npm run start:dev",
     "watch:dev:server": "cd server && npm run start:server",
-    "watch:server": "cd server && npm run start:dev"
+    "watch:server": "cd server && npm run start:dev",
+    "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,css,less,json}'"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
