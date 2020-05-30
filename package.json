@@ -11,7 +11,7 @@
     "build:client": "cd client && npm run build:clean && npm run build:js",
     "build:server": "cd server && npm run build:clean && npm run build:js",
     "start": "cd server && start:prod:server",
-    "start:server": "cd server && npm run start:server",
+    "watch:dev:server": "cd server && npm run start:server",
     "watch:client": "cd client && npm run start:dev",
     "watch:server": "cd server && npm run start:dev",
     "test:client": "cd client && npm run test",
