@@ -1,36 +1,53 @@
 {
-  "name": "typey-fullstack-boilerplate",
+  "name": "typey-mern-stack-boilerplate",
   "version": "1.0.0",
-  "description": "a better fullstack typescript project",
+  "description": "a better mern-stack project",
   "main": "index.js",
   "scripts": {
     "install": "concurrently --raw 'npm:install:server' 'npm:install:client'",
+
     "install:client": "cd client && npm ci",
     "install:server": "cd server && npm ci",
-    "start": "npm run start:server",
+
     "build": "concurrently --raw 'npm:build:server' 'npm:build:client'",
-    "start:client": "cd client && npm run start",
-    "start:server": "cd server && npm run start",
+
     "build:client": "cd client && npm run build:clean && npm run build:js",
     "build:server": "cd server && npm run build:clean && npm run build:js",
+
+    "start": "cd server && start:prod:server",
+
+    "start:server": "cd server && npm run start:server",
+    "watch:client": "cd client && npm run start:dev",
+    "watch:server": "cd server && npm run start:dev",
+
     "test:client": "cd client && npm run test",
     "test:server": "cd server && npm run test",
+
     "lint:client": "cd client && npm run lint",
-    "lint:server": "cd server && npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:server": "cd server && npm run lint"
   },
   "devDependencies": {
     "concurrently": "^5.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nikolaevtomov/typey-fullstack-boilerplate.git"
+    "url": "git+https://github.com/nikolaevtomov/typey-mern-stack-boilerplate.git"
   },
-  "keywords": [],
+  "keywords": [
+    "mern",
+    "mongo",
+    "express",
+    "react",
+    "node",
+    "typescript",
+    "webpack",
+    "javascript",
+    "fullstack"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nikolaevtomov/typey-fullstack-boilerplate/issues"
+    "url": "https://github.com/nikolaevtomov/typey-mern-stack-boilerplate/issues"
   },
-  "homepage": "https://github.com/nikolaevtomov/typey-fullstack-boilerplate#readme"
+  "homepage": "https://github.com/nikolaevtomov/typey-mern-stack-boilerplate#readme"
 }

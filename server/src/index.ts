@@ -7,7 +7,7 @@ import router from '^/router';
 const app = express();
 const { PORT = 3000 } = process.env;
 
-app.use(express.static(path.resolve(process.cwd(), 'client', 'dist')));
+app.use(express.static(path.resolve(process.cwd(), '..', 'client', 'dist')));
 
 app.use(bodyParser.json());
 
@@ -18,7 +18,7 @@ app.use((_req: Request, res: Response) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`server started at http://localhost:${PORT}`);
+  console.log(`Server started at http://localhost:${PORT}`);
 });
 
 export default app;

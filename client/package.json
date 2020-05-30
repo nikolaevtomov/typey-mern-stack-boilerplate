@@ -4,7 +4,7 @@
   "description": "client dependencies",
   "main": "src/index.tsx",
   "scripts": {
-    "start": "cross-env NODE_ENV=development DEBUG=true webpack --watch --mode development",
+    "start:dev": "cross-env NODE_ENV=development DEBUG=true webpack --watch --mode development",
     "build:clean": "rm -rf dist && mkdir dist",
     "build:js": "cross-env NODE_ENV=production DEBUG=false webpack --mode production --progress --colors",
     "build:all": "npm run build:clean && npm run build:js",

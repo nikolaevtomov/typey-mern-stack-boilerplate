@@ -12,8 +12,18 @@ $ npm run build
 
 #### Start the server
 `
-$ npm run start
+$ npm run start:server
 `
 
-#### Client dev server: http://localhost:8000/
+#### Watch the server
+`
+$ npm run watch:server
+`
+
+#### Watch the client
+`
+$ npm run watch:client
+`
+
+#### Client dev server: http://localhost:3000/
 #### Api server: http://localhost:3000/api/message
