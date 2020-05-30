@@ -1,23 +1,19 @@
 # Typey Fullstack JS Boilerplate
 
+#### Install client and server dependencies
 `
 $ npm install
 `
 
-`
-$ npm run start:dev
-`
-
+#### Build client and server directories
 `
 $ npm run build
 `
 
+#### Start the server
 `
 $ npm run start
 `
 
-`
-$ npm run test
-`
-
-http://localhost:3000/api/message
+#### Client dev server: http://localhost:8000/
+#### Api server: http://localhost:3000/api/message
