@@ -1,4 +1,4 @@
-# Typey Fullstack JS Boilerplate
+# Typey MERN Stack Boilerplate
 
 #### Install client and server dependencies
 `
