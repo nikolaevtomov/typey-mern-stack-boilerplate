@@ -2,31 +2,6 @@
   "name": "typey-mern-stack-boilerplate",
   "version": "1.0.0",
   "description": "a better mern-stack project",
-  "main": "index.js",
-  "scripts": {
-    "install": "concurrently --raw 'npm:install:server' 'npm:install:client'",
-    "install:client": "cd client && npm ci",
-    "install:server": "cd server && npm ci",
-    "build": "concurrently --raw 'npm:build:server' 'npm:build:client'",
-    "build:client": "cd client && npm run build:clean && npm run build:js",
-    "build:server": "cd server && npm run build:clean && npm run build:js",
-    "start": "cd server && start:prod:server",
-    "watch:dev:server": "cd server && npm run start:server",
-    "watch:client": "cd client && npm run start:dev",
-    "watch:server": "cd server && npm run start:dev",
-    "test:client": "cd client && npm run test",
-    "test:server": "cd server && npm run test",
-    "lint:client": "cd client && npm run lint",
-    "lint:server": "cd server && npm run lint"
-  },
-  "devDependencies": {
-    "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nikolaevtomov/typey-mern-stack-boilerplate.git"
-  },
   "keywords": [
     "mern",
     "mongo",
@@ -38,10 +13,73 @@
     "javascript",
     "fullstack"
   ],
-  "author": "",
-  "license": "ISC",
+  "homepage": "https://github.com/nikolaevtomov/typey-mern-stack-boilerplate#readme",
   "bugs": {
     "url": "https://github.com/nikolaevtomov/typey-mern-stack-boilerplate/issues"
   },
-  "homepage": "https://github.com/nikolaevtomov/typey-mern-stack-boilerplate#readme"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikolaevtomov/typey-mern-stack-boilerplate.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "concurrently --raw 'npm:build:server' 'npm:build:client'",
+    "build:client": "cd client && npm run build:clean && npm run build:js",
+    "build:server": "cd server && npm run build:clean && npm run build:js",
+    "install": "concurrently --raw 'npm:install:server' 'npm:install:client'",
+    "install:client": "cd client && npm ci",
+    "install:server": "cd server && npm ci",
+    "lint:client": "cd client && npm run lint",
+    "lint:server": "cd server && npm run lint",
+    "start": "cd server && start:prod:server",
+    "test:client": "cd client && npm run test",
+    "test:server": "cd server && npm run test",
+    "watch:client": "cd client && npm run start:dev",
+    "watch:dev:server": "cd server && npm run start:server",
+    "watch:server": "cd server && npm run start:dev"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.0.5",
+    "@typescript-eslint/eslint-plugin": "^3.0.0",
+    "@typescript-eslint/parser": "^3.0.0",
+    "autoprefixer": "^9.8.0",
+    "chai": "^4.2.0",
+    "circular-dependency-plugin": "^5.2.0",
+    "compression-webpack-plugin": "^4.0.0",
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.0",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.20.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^6.0.0",
+    "fork-ts-checker-webpack-plugin": "^4.1.4",
+    "html-webpack-plugin": "^4.3.0",
+    "mocha": "^7.2.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "sass-loader": "^8.0.2",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^7.0.4",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-node-externals": "^1.7.2"
+  }
 }
