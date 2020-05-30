@@ -1,7 +1,7 @@
 {
-  "name": "typey-boilerplate",
+  "name": "client",
   "version": "0.0.1",
-  "description": "a better typescript project",
+  "description": "client dependencies",
   "main": "src/index.tsx",
   "scripts": {
     "start": "cross-env NODE_ENV=development DEBUG=true webpack --watch --mode development",

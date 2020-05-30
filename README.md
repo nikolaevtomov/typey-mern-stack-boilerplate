@@ -1,4 +1,4 @@
-# Typey RESTful boilerplate
+# Typey Fullstack JS Boilerplate
 
 `
 $ npm install

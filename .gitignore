@@ -1,12 +1,17 @@
 # dependencies
 /node_modules/
 client/node_modules/
+server/node_modules/
 
 # coverage
 /coverage
+client/coverage
+server/coverage
 
 # production
 build*/
+client/build*/
+server/build*/
 
 # misc
 .vscode/
