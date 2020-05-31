@@ -31,6 +31,7 @@
     "install": "concurrently --raw 'npm:install:server' 'npm:install:client'",
     "install:client": "cd client && npm ci",
     "install:server": "cd server && npm ci",
+    "lint": "concurrently --raw 'npm:lint:client' 'npm:lint:server'",
     "lint:client": "cd client && npm run lint",
     "lint:server": "cd server && npm run lint",
     "start": "cd server && start:prod:server",
@@ -39,7 +40,9 @@
     "watch:client": "cd client && npm run start:dev",
     "watch:dev:server": "cd server && npm run start:server",
     "watch:server": "cd server && npm run start:dev",
-    "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,css,less,json}'"
+    "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,css,less,json}'",
+    "test": "mocha -require ts-node/register --recursive 'client/src/**/*.spec.{ts,tsx,js,jsx}' 'server/src/**/*.spec.{ts,js,}'"
+
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",

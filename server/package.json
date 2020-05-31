@@ -10,7 +10,6 @@
     "start:dev": "cross-env NODE_ENV=development DEBUG=true webpack --watch --mode development",
     "start:prod:server": "node ./dist/bundle.js",
     "start:server": "nodemon ./dist/bundle.js",
-    "test": "mocha -require ts-node/register 'src/**/*.spec.{ts,js}'",
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {

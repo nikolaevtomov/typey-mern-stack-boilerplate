@@ -8,8 +8,7 @@
     "build:js": "cross-env NODE_ENV=production DEBUG=false webpack --mode production --progress --colors",
     "lint": "tsc --noEmit && eslint 'src/*.{ts,tsx,js,jsx,css,less,json}' --quiet --fix",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "start:dev": "cross-env NODE_ENV=development DEBUG=true webpack --watch --mode development",
-    "test": "mocha -require ts-node/register 'src/**/*.spec.{ts,tsx,js,jsx}'"
+    "start:dev": "cross-env NODE_ENV=development DEBUG=true webpack --watch --mode development"
   },
   "dependencies": {
     "@babel/core": "^7.9.6",
