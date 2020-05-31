@@ -85,5 +85,8 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0",
     "webpack-node-externals": "^1.7.2"
+  },
+  "engines": {
+    "node": "12.13.x"
   }
 }
