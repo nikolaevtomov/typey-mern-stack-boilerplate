@@ -23,7 +23,7 @@
   },
   "license": "ISC",
   "author": "",
-  "main": "index.js",
+  "main": "server/src/index.ts",
   "scripts": {
     "build": "concurrently --raw 'npm:build:server' 'npm:build:client'",
     "build:client": "cd client && npm run build:clean && npm run build:js",
