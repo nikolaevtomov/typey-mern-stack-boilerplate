@@ -10,17 +10,17 @@ $ npm install
 $ npm run build
 `
 
-#### Start the dev server
+#### Start node server
 `
 $ npm run watch:dev:server
 `
 
-#### Watch for the server changes
+#### Watch for the server file changes
 `
 $ npm run watch:server
 `
 
-#### Watch for the client changes
+#### Watch for the client file changes
 `
 $ npm run watch:client
 `
