@@ -7,7 +7,9 @@ import router from '^/router';
 const app = express();
 const { PORT = 3000 } = process.env;
 
-app.use(express.static(path.resolve(process.cwd(), '..', 'client', 'dist')));
+app.use(
+  express.static(path.resolve(process.cwd(), '..', '..', 'client', 'dist')),
+);
 
 app.use(bodyParser.json());
 
