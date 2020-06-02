@@ -200,7 +200,7 @@ module.exports = {
 
     new ExtractTextPlugin({
       disable: ISDEV,
-      filename: 'bundle.[hash].css',
+      filename: ISDEV ? 'bundle.[hash].css' : 'bundle.css',
       allChunks: true,
     }),
   ].concat(
