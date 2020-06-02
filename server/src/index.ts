@@ -1,6 +1,6 @@
 import express from 'express';
 // import bodyParser from 'body-parser';
-// import path from 'path';
+import path from 'path';
 
 // import router from '^/router';
 
@@ -9,8 +9,8 @@ const { PORT = 3000 } = process.env;
 
 // app.use(bodyParser.json());
 
-// app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('../public'));
+app.use(express.static(path.resolve(process.cwd(), '..', 'public')));
+// app.use(express.static('public'));
 // app.use(express.static(path.resolve(process.cwd(), '..', 'client', 'dist')));
 
 // app.use('/api', router);
