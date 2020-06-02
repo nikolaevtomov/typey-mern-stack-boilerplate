@@ -11,10 +11,8 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.resolve(process.cwd(), '..', 'public')));
 
-app.get('/', (_req, res) => {
-  res.sendFile('index.html', {
-    root: path.resolve(process.cwd(), '..', 'public'),
-  });
+app.get('/', function (_req, res) {
+  res.render('index.html');
 });
 
 app.use('/api', router);
