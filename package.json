@@ -89,5 +89,6 @@
   "engines": {
     "node": "12.13.x"
   },
-  "proxy": "http://localhost:3000"
+  "proxy": "http://localhost:3000",
+  "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
 }
