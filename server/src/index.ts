@@ -13,7 +13,7 @@ app.use(express.static(path.resolve(process.cwd(), '..', 'public')));
 
 app.get('/', (_req, res) => {
   res.sendFile('index.html', {
-    root: path.resolve(process.cwd(), '..', '..', 'public'),
+    root: path.resolve(process.cwd(), 'public'),
   });
 });
 
