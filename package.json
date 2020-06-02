@@ -42,7 +42,6 @@
     "watch:server": "cd server && npm run start:dev",
     "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,css,less,json}'",
     "test": "mocha -require ts-node/register --recursive 'client/src/**/*.spec.{ts,tsx,js,jsx}' 'server/src/**/*.spec.{ts,js,}'"
-
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
@@ -72,7 +71,6 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "prettier": "^2.0.5",
-    "react": "^16.13.1",
     "sass-loader": "^8.0.2",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.2.1",
@@ -90,5 +88,8 @@
     "node": "12.13.x"
   },
   "proxy": "http://localhost:3000",
-  "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+  "dependencies": {
+    "react": "^16.13.1"
+  }
 }
