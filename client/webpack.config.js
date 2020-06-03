@@ -51,7 +51,7 @@ module.exports = {
     filename: 'bundle.js',
   },
 
-  devtool: !ISDEV ? 'cheap-source-map' : 'cheap-module-source-map',
+  devtool: ISDEV ? 'cheap-source-map' : 'cheap-module-source-map',
 
   resolve: {
     modules: ['node_modules'],
