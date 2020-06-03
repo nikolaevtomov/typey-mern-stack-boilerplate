@@ -9,7 +9,13 @@ const { PORT = 3000 } = process.env;
 
 app.use(bodyParser.json());
 
-app.use(express.static(path.resolve(process.cwd(), '..', 'client', 'dist')));
+app.use(express.static(path.resolve(process.cwd(), 'client', 'dist')));
+
+app.get('/*', (_req, res) => {
+  res.sendFile('index.html', {
+    root: path.resolve(process.cwd(), 'client', 'dist'),
+  });
+});
 
 app.use('/api', router);
 

@@ -48,7 +48,7 @@ module.exports = {
   output: {
     publicPath: path.resolve(CWD, '/'),
     path: path.resolve(CWD, 'dist'),
-    filename: 'bundle.js',
+    filename: ISDEV ? 'bundle.js' : 'bundle.[hash].js',
   },
 
   devtool: ISDEV ? 'cheap-source-map' : 'cheap-module-source-map',
@@ -200,7 +200,7 @@ module.exports = {
 
     new ExtractTextPlugin({
       disable: ISDEV,
-      filename: 'bundle.[hash].css',
+      filename: ISDEV ? 'bundle.css' : 'bundle.[hash].css',
       allChunks: true,
     }),
   ].concat(

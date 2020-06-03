@@ -42,7 +42,6 @@
     "watch:server": "cd server && npm run start:dev",
     "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,css,less,json}'",
     "test": "mocha -require ts-node/register --recursive 'client/src/**/*.spec.{ts,tsx,js,jsx}' 'server/src/**/*.spec.{ts,js,}'"
-
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",

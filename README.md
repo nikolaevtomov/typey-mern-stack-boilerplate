@@ -26,4 +26,4 @@ $ npm run watch:client
 `
 
 #### Client dev server: http://localhost:3000/
-#### Api server: http://localhost:3000/api/message
+#### Api server: http://localhost:3000/api/ping
