@@ -34,7 +34,7 @@
     "lint": "concurrently --raw 'npm:lint:client' 'npm:lint:server'",
     "lint:client": "cd client && npm run lint",
     "lint:server": "cd server && npm run lint",
-    "start": "cd server && start:prod:server",
+    "start": "cd server && npm run start:prod:server",
     "test:client": "cd client && npm run test",
     "test:server": "cd server && npm run test",
     "watch:client": "cd client && npm run start:dev",
