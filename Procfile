@@ -1,1 +1,1 @@
-web: node ./server/dist/bundle.js
+web: nodemon ./server/dist/bundle.js
