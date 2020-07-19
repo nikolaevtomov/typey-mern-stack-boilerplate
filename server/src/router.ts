@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get('/ping', (_req: Request, res: Response) => {
   res.send({
-    message: 'Hello world!',
+    message: 'Pong!',
   });
 });
 
@@ -13,7 +13,7 @@ router.post('/ping', (req: Request, res: Response) => {
 });
 
 router.use((_req: Request, res: Response) => {
-  res.status(404).send({ error: 'Page not found' });
+  res.status(404).send({ error: 'No API route!' });
 });
 
 export default router;

@@ -9,13 +9,17 @@ const { PORT = 3000 } = process.env;
 
 app.use(bodyParser.json());
 
-app.use(express.static(path.resolve(process.cwd(), 'client', 'dist')));
+// NOTE: Works for production but not on local
+// app.use(express.static(path.resolve(process.cwd(), 'client', 'dist')));
+
+// NOTE: Works for local but not for production
+app.use(express.static(path.resolve(process.cwd(), '..', 'client', 'dist')));
 
 app.use('/api', router);
 
-app.get('*', (_req, res) => {
+app.get('/*', (_req, res) => {
   res.sendFile('index.html', {
-    root: path.join(__dirname, 'client', 'dist'),
+    root: path.join(path.resolve(process.cwd(), '..', 'client', 'dist')),
   });
 });
 
