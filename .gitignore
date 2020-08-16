@@ -16,6 +16,7 @@ server/build*/
 # misc
 .vscode/
 .DS_Store
+.env
 .env*.local
 npm-debug.log*
 dist/
