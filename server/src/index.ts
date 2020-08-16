@@ -1,13 +1,25 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
 import router from '^/router';
 
+dotenv.config({ path: path.resolve(process.cwd(), '..', '.env') });
+
 const app = express();
-const { PORT = 3000 } = process.env;
+const { PORT = 3000, USERNAME, DATABASE, PASSWORD } = process.env;
 
 app.use(bodyParser.json());
+
+mongoose.connect(
+  `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.3qdwg.mongodb.net/${DATABASE}?retryWrites=true&w=majority`,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+);
 
 // NOTE: Works for production but not on local
 // app.use(express.static(path.resolve(process.cwd(), 'client', 'dist')));
