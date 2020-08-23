@@ -2,7 +2,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
 import mongoose from 'mongoose';
-import cors from 'cors';
 import dotenv from 'dotenv';
 
 import router from '^/router';
@@ -12,7 +11,6 @@ dotenv.config({ path: path.resolve(process.cwd(), '..', '.env') });
 const app = express();
 const { PORT = 3000, USERNAME, DATABASE, PASSWORD } = process.env;
 
-app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect(
