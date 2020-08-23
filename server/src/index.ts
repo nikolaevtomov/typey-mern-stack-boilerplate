@@ -22,16 +22,16 @@ mongoose.connect(
 );
 
 // NOTE: Works for production but not on local
-app.use(express.static(path.resolve(process.cwd(), 'client', 'dist')));
+app.use(express.static(path.resolve(__dirname, 'client', 'dist')));
 
 // NOTE: Works for local but not for production
-// app.use(express.static(path.resolve(process.cwd(), '..', 'client', 'dist')));
+// app.use(express.static(path.resolve(process.cwd(), 'client', 'dist')));
 
 app.use('/api', router);
 
 app.get('/*', (_req, res) => {
   res.sendFile('index.html', {
-    root: path.join(path.resolve(process.cwd(), '..', 'client', 'dist')),
+    root: path.join(path.resolve(__dirname, 'client', 'dist')),
   });
 });
 
