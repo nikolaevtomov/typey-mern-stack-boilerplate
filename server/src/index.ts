@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import dotenv from 'dotenv';
 
 import router from '^/router';
@@ -11,6 +12,7 @@ dotenv.config({ path: path.resolve(process.cwd(), '..', '.env') });
 const app = express();
 const { PORT = 3000, USERNAME, DATABASE, PASSWORD } = process.env;
 
+app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect(
@@ -22,16 +24,16 @@ mongoose.connect(
 );
 
 // NOTE: Works for production but not on local
-app.use(express.static(path.resolve(__dirname, 'client', 'dist')));
+app.use(express.static(path.resolve(process.cwd(), 'client', 'dist')));
 
 // NOTE: Works for local but not for production
-// app.use(express.static(path.resolve(process.cwd(), 'client', 'dist')));
+// app.use(express.static(path.resolve(process.cwd(), '..', 'client', 'dist')));
 
 app.use('/api', router);
 
 app.get('/*', (_req, res) => {
   res.sendFile('index.html', {
-    root: path.join(path.resolve(__dirname, 'client', 'dist')),
+    root: path.join(path.resolve(process.cwd(), '..', 'client', 'dist')),
   });
 });
 
