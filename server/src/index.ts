@@ -22,10 +22,10 @@ mongoose.connect(
 );
 
 // NOTE: Works for production but not on local
-app.use(express.static(path.resolve(process.cwd(), 'client', 'dist')));
+// app.use(express.static(path.resolve(process.cwd(), 'client', 'dist')));
 
 // NOTE: Works for local but not for production
-// app.use(express.static(path.resolve(process.cwd(), '..', 'client', 'dist')));
+app.use(express.static(path.resolve(process.cwd(), '..', 'client', 'dist')));
 
 app.use('/api', router);
 
