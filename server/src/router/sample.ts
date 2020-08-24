@@ -25,6 +25,17 @@ router.post('/sample', async (req: Request, res: Response) => {
   }
 });
 
+router.get('/sample/:id', async (req: Request, res: Response) => {
+  try {
+    const sample = await SampleModel.findOne({ _id: req.params.id });
+
+    if (!sample) res.status(404).send('No sample found!');
+    res.status(200).send(sample);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
 router.patch('/sample/:id', async (req: Request, res: Response) => {
   try {
     await SampleModel.findByIdAndUpdate(req.params.id, req.body);
@@ -40,7 +51,7 @@ router.delete('/sample/:id', async (req: Request, res: Response) => {
     const sample = await SampleModel.findByIdAndDelete(req.params.id);
 
     if (!sample) res.status(404).send('No sample found!');
-    res.status(200).send();
+    res.status(200).send(sample);
   } catch (err) {
     res.status(500).send(err);
   }
