@@ -64,3 +64,7 @@ http://localhost:3000/api/sample/:id {GET/PATCH/DELETE}
   "value": "4000"
 }
 ```
+
+#### Knowns issues:
+- Heroku, static files path need resolving
+- Heroku, client router path need fixing
