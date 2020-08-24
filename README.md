@@ -56,7 +56,7 @@ http://localhost:3000/api/ping {GET/POST}
 ```
 ```bash
 http://localhost:3000/api/samples {GET}
-http://localhost:3000/api/sample {GET/POST}
+http://localhost:3000/api/sample {POST}
 http://localhost:3000/api/sample/:id {GET/PATCH/DELETE}
 
 {
